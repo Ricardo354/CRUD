@@ -10,9 +10,9 @@ body {
     
 }
 
-.content-table, td{
+table, td{
     border: 1px solid black;
-    width: 150px;
+    width: 400px;
     border-collapse: collapse;
     
 }
