@@ -1,24 +1,159 @@
+:root {
+    --dark: #020517;
+    --light: white;
+}
+
+.lightmode {
+    --dark: white;
+    --light: #020517;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;    
-    
+    background-color: var(--dark);
+    color: var(--light);
 }
 
 .content{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 24rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.logo:hover {
+    filter: brightness(1.4) invert(0.1);
+}
+
+h1 {
+    margin: 1rem;
+}
+
+h4 {
+    font-family: monospace;
+    font-size: 1rem;
+    background-color: #b61b28;
+    width: 50rem;
+    border-radius: 0 0 8px 8px;
+    padding: 5px;
+    color: white;
+}
+
+.form {
+    width: 50rem;
+    height: 2rem;
+    background-color: #b61b28;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.form .inputContent {
+    padding: 8px;
+    height: 100%;
+    width: 8rem;
+    border: none;
+    outline: none;
+    border-radius: 16px 0 0 16px;
+    transition: 200ms;
+
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.form .inputContent:hover {
+    width: 16rem;
     
 }
 
-table, td{
-    border: 1px solid black;
-    width: 400px;
+.form .inputContent:focus {
+    width: 16rem;
+}
+
+.form .btn {
+    border-top-right-radius: 8px;
+    border: none;
+    height: 100%;
+    width: 8rem;
+    background-color: #8d1620;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+table {
+    width: 50rem;
+}
+
+table, td {
     border-collapse: collapse;
-    
 }
 
-th{
-    border: 1px solid black;
-    
+td, th {
+    padding: 1rem;
 }
 
+td {
+    background-color: var(--light);
+    color: var(--dark);
+    min-width: calc(100% / 3);
+}
+
+td a {
+    color: white;
+    padding: 2px 6px;
+    background-color: #DC2132;
+    text-decoration: none;
+}
+
+td a:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+td a:last-child {
+    border-radius: 0 8px 8px 8px;
+}
+
+td a:hover {
+    filter: brightness(0.9);
+}
+
+.task {
+    width: 30rem;
+    height: 6ch;
+    word-break: break-all;
+    overflow-x: auto;
+}
+
+th {
+    background-color: #DC2132;
+    color: white;
+    transition: 100ms;
+}
+
+th:hover {
+    background-color: #b61b28;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+    
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
